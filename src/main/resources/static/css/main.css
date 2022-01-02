@@ -1,0 +1,27 @@
+.global{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.header-body{
+    text-align: center;
+}
+
+.data-table{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.welcome{
+    padding: 20px;
+}
+
+.hrefs {
+    padding: 0 0 0 0;
+    margin-top: 10px;
+    font-family: Serif;
+    color: darkblue;
+}
