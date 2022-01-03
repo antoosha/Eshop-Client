@@ -10,6 +10,9 @@
     <div class="global">
         <h1 style="text-align: center">Add new product</h1>
         <form action="#" th:action="@{/products/add}" th:object="${productWebModel}" method="post">
+            <div class="alert alert-warning" th:if="*{error}">
+                Price should be greater or equal than 0.
+            </div>
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" id="productName" name="productName" th:field="*{productName}" class="form-control" required/><br/>

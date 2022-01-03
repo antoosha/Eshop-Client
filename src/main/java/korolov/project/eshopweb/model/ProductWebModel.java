@@ -1,21 +1,21 @@
 package korolov.project.eshopweb.model;
 
 public class ProductWebModel extends ProductDTO{
-    private boolean nameError;
+    private boolean error;
 
     public ProductWebModel() {
     }
 
-    public ProductWebModel(boolean nameError, ProductDTO productDTO) {
+    public ProductWebModel(boolean error, ProductDTO productDTO) {
         super(productDTO.productName, productDTO.price, productDTO.productId);
-        this.nameError = nameError;
+        this.error = error;
     }
 
-    public boolean isNameError() {
-        return nameError;
+    public boolean isError() {
+        return error;
     }
 
-    public void setNameError(boolean nameError) {
-        this.nameError = nameError;
+    public void setError(boolean error) {
+        this.error = error;
     }
 }

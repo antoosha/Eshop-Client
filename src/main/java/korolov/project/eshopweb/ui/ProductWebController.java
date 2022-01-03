@@ -48,7 +48,7 @@ public class ProductWebController {
     public String addProductSubmit(@ModelAttribute ProductWebModel productWebModel, Model model) {
         model.addAttribute("productWebModel",
                 productClient.create(productWebModel).onErrorResume(WebClientResponseException.Conflict.class, e -> Mono.just(new ProductWebModel(true, productWebModel))));
-        return "redirect:/products";
+        return "productAdd";
     }
 
     @GetMapping("/delete")
@@ -57,6 +57,8 @@ public class ProductWebController {
         return "redirect:/products";
     }
 
+
+    //http://localhost:8081/products/price/less?price=10 - example
     @GetMapping("/price/less")
     public String allWithPriceLessEq(@RequestParam Double price, Model model) {
         model.addAttribute("products", productClient.readAllWithPriceLessEq(price));

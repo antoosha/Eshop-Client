@@ -47,7 +47,7 @@ public class ClientWebController {
     public String addClientSubmit(@ModelAttribute ClientWebModel clientWebModel, Model model) {
         model.addAttribute("clientWebModel",
                 clientClient.create(clientWebModel).onErrorResume(WebClientResponseException.Conflict.class, e -> Mono.just(new ClientWebModel(true, clientWebModel))));
-        return "redirect:/clients";
+        return "clientAdd";
     }
 
     @GetMapping("/delete")
