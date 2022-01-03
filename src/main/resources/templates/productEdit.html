@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <label>Price:</label>
-            <input type="number" step="0.01" name="price" th:field="*{price}" class="form-control" required/><br/>
+            <input type="number" step="0.01" name="price" th:field="*{price}" class="form-control" required min="0"/><br/>
         </div>
         <input type="submit" class="btn btn-primary"/>
     </form>
