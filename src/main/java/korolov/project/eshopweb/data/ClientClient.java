@@ -9,6 +9,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * ClientClient class which has methods, that communicate with server side of application using WebFlux.
+ */
 @Component
 public class ClientClient {
     private static final String ONE_URI = "/{id}";

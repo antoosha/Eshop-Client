@@ -11,6 +11,9 @@ import reactor.core.publisher.Mono;
 import korolov.project.eshopweb.model.ProductDTO;
 import korolov.project.eshopweb.model.ProductWebModel;
 
+/**
+ * ProductClient class which has methods, that communicate with server side of application using WebFlux.
+ */
 @Component
 public class ProductClient {
     private static final String ONE_URI = "/{id}";
@@ -37,7 +40,7 @@ public class ProductClient {
 
     public Flux<ProductWebModel> readAllWithPriceLessEq(Double price) {
         return productWebClient.get()
-                .uri("/price/less/{price}",price)
+                .uri("/price/less/{price}", price)
                 .retrieve() // request specification finished
                 .bodyToFlux(ProductWebModel.class); // interpret response body as a collection
     }

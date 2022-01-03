@@ -1,6 +1,6 @@
 package korolov.project.eshopweb.model;
 
-public class ProductWebModel extends ProductDTO{
+public class ProductWebModel extends ProductDTO {
     private boolean error;
 
     public ProductWebModel() {
